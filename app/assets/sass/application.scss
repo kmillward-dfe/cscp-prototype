@@ -3,7 +3,7 @@ $govuk-global-styles: true;
 $govuk-new-link-styles: true;
 
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
-$govuk-assets-path: '/govuk/assets/';
+$govuk-assets-path: "/govuk/assets/";
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import ".tmp/sass/extensions";
@@ -19,3 +19,61 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/task-list";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+/* HOME PAGE */
+
+/* covid banner */
+#covid-banner.govuk-notification-banner {
+  border: 0px;
+  margin: 0px;
+}
+#covid-banner.govuk-notification-banner .govuk-notification-banner__content {
+  background-color: $govuk-brand-colour;
+}
+
+#covid-banner.govuk-notification-banner .govuk-notification-banner__heading {
+  color: white;
+  font-size: 0.9em;
+  max-width: 100%;
+}
+
+#covid-banner.govuk-notification-banner
+  .govuk-notification-banner__heading
+  .govuk-notification-banner__link {
+  color: inherit;
+}
+
+/* tabs */
+
+//tab titles height change
+#school-finder.govuk-tabs__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.js-enabled .govuk-tabs__panel{
+    border: 0px;
+}
+
+//mile dropdown
+#search-radius {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: inherit;
+  padding: 5px;
+  background-color: white;
+  border: 2px solid $govuk-input-border-colour;
+  border-left: 0px;
+}
+
+/* footer */
+
+#footer-links {
+  border-top: 1px solid $govuk-border-colour;
+}
+
+#footer-links li{
+  font-size:0.8em;
+  padding:20px 50px 0px 0px;
+  display:inline-block;
+}
+
