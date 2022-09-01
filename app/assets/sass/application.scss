@@ -20,13 +20,60 @@ $govuk-assets-path: "/govuk/assets/";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+/* WHOLE SERVICE */
+
+//changing font size of paragraphs, lists, labels
+p,
+.govuk-body,
+.govuk-list,
+.govuk-radios__label {
+  font-size: 16px;
+}
+
 /* HOME PAGE */
+
+//blue line top of one third column
+#column-data-tables {
+  border-top: 10px solid $govuk-brand-colour;
+  padding-top: 20px;
+}
+
+//my schools icon and text
+#my-schools {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+
+#school-list-logo {
+  max-width: 1.4em;
+  padding-right: 10px;
+}
+
+//0 circle
+.school-list-count {
+  background-color: #0b0c0c;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8em;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  font-weight: bold;
+}
 
 /* covid banner */
 #covid-banner.govuk-notification-banner {
   border: 0px;
   margin: 0px;
 }
+
 #covid-banner.govuk-notification-banner .govuk-notification-banner__content {
   background-color: $govuk-brand-colour;
 }
@@ -34,7 +81,6 @@ $govuk-assets-path: "/govuk/assets/";
 #covid-banner.govuk-notification-banner .govuk-notification-banner__heading {
   color: white;
   font-size: 0.9em;
-  max-width: 100%;
 }
 
 #covid-banner.govuk-notification-banner
@@ -45,23 +91,24 @@ $govuk-assets-path: "/govuk/assets/";
 
 /* tabs */
 
-//tab titles height change
+//tab titles height change - fixed from the live
 #school-finder.govuk-tabs__list {
   display: flex;
   flex-direction: row;
 }
 
-.js-enabled .govuk-tabs__panel{
-    border: 0px;
+.js-enabled .govuk-tabs__panel {
+  border: 0px;
 }
 
 //mile dropdown
-#search-radius {
+#search-radius,
+#search-radius-trust-sponsor {
   font-family: "GDS Transport", arial, sans-serif;
   font-size: inherit;
   padding: 5px;
   background-color: white;
-  border: 2px solid $govuk-input-border-colour;
+  border: 1px solid $govuk-border-colour;
   border-left: 0px;
 }
 
@@ -71,9 +118,52 @@ $govuk-assets-path: "/govuk/assets/";
   border-top: 1px solid $govuk-border-colour;
 }
 
-#footer-links li{
-  font-size:0.8em;
-  padding:20px 50px 0px 0px;
-  display:inline-block;
+//to align the image to the right of footer links
+#footer-links ul,
+#footer-links li,
+#footer-links img {
+  display: inline-block;
 }
 
+#footer-links li {
+  font-size: 0.85em;
+  padding: 20px 50px 0px 0px;
+}
+
+//national statistics logo
+#ns-logo {
+  max-width: 4em;
+  height: auto;
+  float: right;
+  padding: 20px 0 0 0;
+}
+
+#footer .govuk-details__summary-text,
+#footer p {
+  font-size: 0.85em;
+}
+
+//size of text area labels
+#footer label {
+  font-size: 0.9em;
+}
+
+//over-riding toolkit in details
+#footer .govuk-details__text {
+  border-left: 0px;
+  padding-left: 0px;
+}
+
+/* other */
+
+//over-riding toolkit, text area and input borders
+.govuk-textarea,
+.govuk-input {
+  border: 1px solid $govuk-border-colour;
+}
+
+//conditional reveal labels styled as govuk-heading-m
+.govuk-radios__conditional .govuk-label {
+  padding: 10px 0;
+  font-weight: 700;
+}
