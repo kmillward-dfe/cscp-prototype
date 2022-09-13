@@ -22,12 +22,22 @@ $govuk-assets-path: "/govuk/assets/";
 
 /* WHOLE SERVICE */
 
-//changing font size of paragraphs, lists, labels
+//overriding standardised padding
+.govuk-main-wrapper {
+  padding-top: 0;
+}
+
+//changing font size of paragraphs, lists, labels, buttons
 p,
 .govuk-body,
 .govuk-list,
 .govuk-radios__label {
   font-size: 16px;
+}
+
+.govuk-button,
+.govuk-table {
+  font-size: 14px;
 }
 
 /* HOME PAGE */
@@ -166,4 +176,77 @@ p,
 .govuk-radios__conditional .govuk-label {
   padding: 10px 0;
   font-weight: 700;
+}
+
+/* SCHOOL OVERVIEW */
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#search-icon {
+  width: 1.3em;
+  padding: 5px;
+}
+
+//getting both top buttons on one line
+.view-trusts {
+  width: 49%;
+}
+
+//table formatting
+.school-info-table .govuk-table__header,
+.school-info-table .govuk-table__cell {
+  font-weight: 100;
+  border: 0;
+  padding: 10px 0px 0px 0;
+}
+
+//styling the panels - including vertically centering the content with hard coding padding
+.school-panel {
+  border: 1px solid $govuk-border-colour;
+  margin-top: 20px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.school-panel .govuk-body {
+  display: flex;
+}
+
+//view buttons aligning right
+.school-panel .govuk-button {
+  margin-left: auto;
+}
+
+//link formatting for share this page
+.share-page a {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+//share this page icon formatting
+.social-media {
+  width: 1.3em;
+  margin-top: 1px;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+
+//view map icon formatting
+#view-map {
+  width: 1em;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+
+//multi-academy info icon
+#multi-info {
+  width: 1.2em;
+  margin-left: 5px;
+  vertical-align: top;
 }
