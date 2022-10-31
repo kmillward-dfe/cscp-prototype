@@ -31,7 +31,8 @@ $govuk-assets-path: "/govuk/assets/";
 p,
 .govuk-body,
 .govuk-list,
-.govuk-radios__label {
+.govuk-radios__label,
+.govuk-details {
   font-size: 16px;
 }
 
@@ -180,15 +181,26 @@ p,
 
 /* SCHOOL OVERVIEW */
 
+.back-search,
 .search {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+}
+
+.search {
+  margin-left: auto;
+  margin-right: 0;
+  float: right;
 }
 
 #search-icon {
   width: 1.3em;
   padding: 5px;
+}
+
+//moving 'share this page' to match the h1
+.share-this-page {
+  margin-top: 30px;
 }
 
 //getting both top buttons on one line
@@ -223,6 +235,25 @@ p,
   margin-left: auto;
 }
 
+
+// SCHOOL OVERVIEW UPDATE!
+
+.overview-tab{
+  width:15%;
+}
+
+.overview-tab a{
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.js-enabled .overview-tab .govuk-tabs__tab:visited {
+  color: $govuk-link-colour;
+}
+
+
+/* ALL SCHOOL PAGES*/
+
 //link formatting for share this page
 .share-page a {
   display: inline-block;
@@ -249,4 +280,78 @@ p,
   width: 1.2em;
   margin-left: 5px;
   vertical-align: top;
+}
+
+/* SCHOOL SECONDARY */
+
+//progress 8 graph width
+#progress-8 {
+  width: 100%;
+}
+
+//sizing all the school charts
+.school-charts {
+  height: 100px;
+  width: 100%;
+}
+
+.school-charts-three {
+  height: 150px;
+  width: 100%;
+}
+
+//changing the height of the sections so they match
+.secondary-half-section {
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px govuk-colour("light-grey") solid;
+  min-height: 230px;
+}
+
+.secondary-header {
+  min-height: 480px;
+}
+
+//full pane links at the bottom
+.full-width-link {
+  border-bottom: 4px govuk-colour("blue") solid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.arrow-right {
+  float: right;
+}
+
+.full-width-link .govuk-link {
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  color: govuk-colour("blue");
+}
+
+#disadvantaged-pupils {
+  border-top: 4px govuk-colour("blue") solid;
+  color: govuk-colour("blue");
+}
+
+//changing margins per paragraph under about this data
+.about-data br {
+  margin-bottom: 15px;
+}
+
+.about-data .govuk-details {
+  margin-bottom: 10px;
+}
+
+//print full information - bottom of page
+#printer-icon {
+  max-width: 1.4em;
+  padding-right: 10px;
+}
+
+.print-information {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
 }

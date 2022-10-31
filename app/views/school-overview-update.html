@@ -96,44 +96,71 @@ college performance data {% endblock %} {% block content %}
         </p>
       </div>
     </div>
-    <div class="govuk-grid-column-full school-panel">
-      <h2 class="govuk-heading-m">Primary performance</h2>
-      <p class="govuk-body">
-        These results are based on all primary schools which are eligible for
-        inclusion in the multi-academy trust performance measures.
-        <button
-          class="govuk-button govuk-button--secondary"
-          data-module="govuk-button"
-        >
-          View
-        </button>
-      </p>
+  </div>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">Contents</h2>
+    <ul class="govuk-tabs__list" id="school-finder">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected overview-tab">
+        <a class="govuk-tabs__tab" href="#primary"> Primary performance </a>
+      </li>
+      <li class="govuk-tabs__list-item overview-tab">
+        <a class="govuk-tabs__tab" href="#secondary"> Secondary performance </a>
+      </li>
+      <li class="govuk-tabs__list-item overview-tab">
+        <a class="govuk-tabs__tab" href="#hello"> 16 to 18 performance </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="primary">
+      <div class="govuk-form-group">
+        <div class="govuk-grid-column-full school-panel">
+          <h2 class="govuk-heading-m">Primary performance</h2>
+          <p class="govuk-body">
+            These results are based on all primary schools which are eligible
+            for inclusion in the multi-academy trust performance measures.
+            <button
+              class="govuk-button govuk-button--secondary"
+              data-module="govuk-button"
+            >
+              Download
+            </button>
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="govuk-grid-column-full school-panel">
-      <h2 class="govuk-heading-m">Secondary performance</h2>
-      <p class="govuk-body">
-        These results are based on all secondary schools which are eligible for
-        inclusion in the multi-academy trust performance measures.
-        <button
-          class="govuk-button govuk-button--secondary"
-          data-module="govuk-button"
-        >
-          View
-        </button>
-      </p>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="secondary">
+      <div class="govuk-form-group">
+        <div class="govuk-grid-column-full school-panel">
+          <h2 class="govuk-heading-m">Secondary performance</h2>
+          <p class="govuk-body">
+            These results are based on all secondary schools which are eligible
+            for inclusion in the multi-academy trust performance measures.
+            <button
+              class="govuk-button govuk-button--secondary"
+              data-module="govuk-button"
+            >
+              View
+            </button>
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="govuk-grid-column-full school-panel">
-      <h2 class="govuk-heading-m">16 to 18 performance</h2>
-      <p class="govuk-body">
-        These results are based on all 16 to 18 schools and colleges which are
-        eligible for inclusion in the multi-academy trust performance measures.
-        <button
-          class="govuk-button govuk-button--secondary"
-          data-module="govuk-button"
-        >
-          View
-        </button>
-      </p>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="hello">
+      <div class="govuk-form-group">
+        <div class="govuk-grid-column-full school-panel">
+          <h2 class="govuk-heading-m">16 to 18 performance</h2>
+          <p class="govuk-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <button
+              class="govuk-button govuk-button--secondary"
+              data-module="govuk-button"
+            >
+              View
+            </button>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </main>
